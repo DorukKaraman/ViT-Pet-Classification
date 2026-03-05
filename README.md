@@ -23,23 +23,27 @@ Vision Transformers process images as sequences of tokens. Here is how a standar
 By extracting the attention weights from the final layer, we can overlay a heatmap onto the original image to see exactly which features drove the classification.
 ![alt text](visuals/attention_map.png)
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 1. Clone this repository:
+   ```
    git clone https://github.com/DorukKaraman/ViT-Pet-Classification
    cd ViT-Pet-Classification
+   ```
 
 2. Create a virtual environment and install dependencies:
+    ```
    python -m venv vit
    source vit/bin/activate
    pip install -r requirements.txt
+   ```
 
 ### Usage
 
 The notebook will automatically download the Oxford-IIIT Pets dataset into a local `data/` directory on the first run.
 
-## 🛠️ Built With
+## Built With
 * **[PyTorch](https://pytorch.org/):** Core deep learning framework.
 * **[Timm](https://huggingface.co/docs/timm/index):** PyTorch Image Models library for loading the pre-trained `vit_base_patch16_224` weights.
 * **[Einops](https://einops.rocks/):** For flexible and readable tensor operations.
