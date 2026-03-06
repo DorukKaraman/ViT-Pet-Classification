@@ -23,6 +23,19 @@ Vision Transformers process images as sequences of tokens. Here is how a standar
 By extracting the attention weights from the final layer, we can overlay a heatmap onto the original image to see exactly which features drove the classification.
 ![alt text](visuals/attention_map.png)
 
+### 3. Fine-Tuning on Oxford-IIIT Pets
+The notebook also demonstrates how to fine-tune the pre-trained ViT for the 37-class pet classification task:
+* **Transfer Learning:** Freezes all backbone parameters and replaces only the classification head.
+* **Efficient Training:** Trains only the final linear layer using Adam optimizer with cross-entropy loss.
+* **Inference:** Shows the model's prediction on a sample image after fine-tuning.
+
+![Training Curves](visuals/training_curves.png)
+
+### 4. Test Set Evaluation
+After fine-tuning, the model is evaluated on the test set. Below is a grid of sample predictions showing the model's performance across different pet breeds.
+
+![Test Predictions](visuals/test_predictions.png)
+
 ## Getting Started
 
 ### Prerequisites
